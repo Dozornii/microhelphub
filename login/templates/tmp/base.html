@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <link rel="stylesheet" href=" {% static 'login1.css' %}">
+
+    <title>{% block title %}MicroHelpHUB{% endblock %}</title>
+</head>
+
+<body>
+  <!-- Side navigation -->
+  <div class="sidenav">
+    <a href="/">Home</a>
+    <a href="/view">View</a>
+    <a href="/create">Create</a>
+  </div>
+
+  <!-- Page content -->
+  <div class="main">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <h1 class="mt-2">MicroHelpHUB</h1>
+        <hr class="mt-0 mb-4">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+
+</body>
+</html>

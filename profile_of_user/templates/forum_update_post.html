@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %} Edit Post {% endblock %}
+{% block css %}
+{% endblock %}
+{% block content %}
+<h2>Edit Post</h2>
+<form method="post">
+    <div>Date and Time Of Post :</div>
+    <div><strong>{{post.timestamp}}</strong></div>
+    <form action="/forum/edit-post/{{post.id}}/" method="POST"> {% csrf_token %}
+        <div class="form-group">
+        </br>  </br>
+          <textarea class="form-control" id="content" name="content" rows="10" cols="50">
+            {{post.post_content}}
+            </textarea>
+        </div>
+</textarea>
+
+    </div>
+    <button type="submit" name="button">Save Changes</button>
+
+{% endblock%}
+
+{% block js %}
+<script>
+ {% if alert %}
+alert('Your Post has been Updated successfully!!');
+document.location = "/forum/"
+{% endif %}
+</script>
+{% endblock %}
