@@ -1,1 +1,1 @@
-web: python manage.py runserver --log-file -
+web: gunicorn djangoherokuapp.wsgi --log-file -
