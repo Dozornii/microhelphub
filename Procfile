@@ -1,1 +1,1 @@
-web: gunicorn hadas2.wsgi --log-file -
+web: gunicorn Hadas.wsgi --log-file -
